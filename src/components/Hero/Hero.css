@@ -1,0 +1,56 @@
+.hero {
+  height: 92vh;
+  padding: 2rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  gap: 1.5rem;
+}
+.hero-content h1 {
+  font-size: 3.5rem;
+  color: aqua;
+}
+.hero-content h3 {
+  color: white;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.explore-button {
+  color: aqua;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 2px solid aqua;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.explore-button:hover {
+  background-color: aqua;
+  color: black;
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    text-align: center;
+    align-items: center;
+    gap: 2rem;
+    width: 70%;
+    margin: 0 auto;
+  }
+  .hero-content h1 {
+    font-size: 6rem;
+  }
+  .hero-content h3 {
+    font-size: 1.2rem;
+  }
+  .explore-button {
+    font-size: 1.2rem;
+  }
+}
