@@ -21,6 +21,9 @@
   font-weight: 400;
   font-size: 1rem;
 }
+.highlight{
+  color: rgba(71, 43, 197, 0.96);
+}
 .explore-button {
   color: aqua;
   text-decoration: none;

@@ -4,10 +4,20 @@
   box-sizing: border-box;
 }
 body {
-  background-image: url("./assets/background.jpg");
+  background-image: ;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 
   font-family: "Poppins", sans-serif;
+}
+.home-background {
+  background: url("./assets/BG.png") no-repeat center center/cover;
+  min-height: 100vh;
+}
+
+.main-background {
+  background: #030238;
+background: linear-gradient(180deg, rgb(1, 1, 43) 0%, rgba(1, 1, 36, 1) 50%, rgba(10, 2, 28, 1) 100%);
+min-height: 100vh;
 }

@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="hero-content">
-        <h1>Your Gateway to the World of Movies & TV</h1>
+        <h1>Your Gateway to the World of<span className="highlight"> Movies & TV</span> </h1>
         <h3>
           Dive into the world of cinema and TV — discover, search, and explore
           without limits.
