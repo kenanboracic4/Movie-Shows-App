@@ -191,6 +191,27 @@
   font-size: 1rem;
   color: rgba(252, 246, 246, 0.671);
 }
+.check-more{
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 20px;
+  margin: 0.5rem auto;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+  background-color: rgba(22, 1, 56, 0.373);
+}
+.check-more:hover{
+  background-color: rgba(92, 15, 247, 0.159);
+}
+#arrow {
+  height: 30px;
+  width: auto;
+  filter: invert(1);
+  margin: 0 auto
+}
 
 @media (min-width: 768px){
   .movie-grid-container {
@@ -201,7 +222,7 @@
   }
   
 }
-@media (min-width: 1024px){
+@media (min-width: 1124px){
   .movie-grid-container {
     padding: 50px;
     width: 90%;

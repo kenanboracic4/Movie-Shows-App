@@ -25,7 +25,10 @@ const MovieCard = ({ title, rating, imageUrl, releaseDate, language }: MovieCard
                 <span>|</span>
                 <p>{releaseDate.split("-")[0]}</p>
             </div>
-            
+            <div className="check-more">
+            <p>Check More</p>
+            <img id='arrow' src="/arrow.svg" alt="" />
+            </div>
             </div>
       </div>
   )

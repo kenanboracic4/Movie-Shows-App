@@ -67,7 +67,7 @@ const MainSection = () => {
       return;
     }
 
-    setTvShowList(data.results);
+    setTvShowList(data.results.slice(0,10));
   } catch {
     setErrorMessage("Failed to fetch TV shows. Please try again later.");
   } finally {
@@ -89,7 +89,7 @@ const MainSection = () => {
     if (!response.ok) {
       throw new Error("Failed to fetch movies");
     }
-    
+
 
     const data = await response.json();
 
@@ -99,7 +99,7 @@ const MainSection = () => {
       return;
     }
 
-    setMovieList(data.results);
+    setMovieList(data.results.slice(0, 10));
   } catch (error) {
     setErrorMessage("Failed to fetch movies. Please try again later.");
   } finally {
