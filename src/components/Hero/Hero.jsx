@@ -1,5 +1,6 @@
 import React from "react";
 import "./Hero.css";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -10,7 +11,7 @@ const Hero = () => {
           Dive into the world of cinema and TV — discover, search, and explore
           without limits.
         </h3>
-        <a href="#" className="explore-button">Explore Now</a>
+        <Link to="/main/movies" className="explore-button">Explore Now</Link>
       </div>
     </section>
   );

@@ -1,6 +1,8 @@
 import  { useState } from "react";
 import logo from "../../assets/logo.png";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
+
 
 
 function Navbar() {
@@ -13,21 +15,9 @@ function Navbar() {
   return (
     <header className="container">
       <div className="main-container">
-        <img src={logo} alt="" />
+        <Link to="/"><img src={logo} alt="" /></Link>
 
-        <div
-          className={`hamburger ${isOpen ? "active" : ""}`}
-          onClick={toggleMenu}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-        <nav className={`nav-links ${isOpen ? "active" : ""}`}>
-          <a href="#">Movies</a>
-          <a href="#">TV Shows</a>
-        </nav>
+        
       </div>
     </header>
   );

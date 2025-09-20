@@ -5,7 +5,7 @@ const Search = ({ searchTerm, setSearchTerm }) => {
     <>
       <div className="search">
         <div className="search-input-container">
-          <img src="searchIcon.svg" alt="Search Icon" className="search-icon" />
+          <img src="/searchIcon.svg" alt="Search Icon" className="search-icon" />
           <input
             type="text"
             value={searchTerm}
