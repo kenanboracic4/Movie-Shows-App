@@ -6,7 +6,7 @@ import { SpinnerCircular } from "spinners-react";
 import {useDebounce} from 'react-use';
 
 const API_BASE_URL = "https://api.themoviedb.org/3";
-const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
+const API_KEY = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhYmFlZDUxMjMzZDQ4MjA4NjQzYzk0YjlmODJlODdjNiIsIm5iZiI6MTc1ODIxOTQwNi4zODYsInN1YiI6IjY4Y2M0YzhlNmYzNDBiMGMzMjVlOTAzYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.b467jp9sVMJc9KN7Al-GXh0OHrWmKjPxAiLU-4aSQjA";
 
 const API_KEY_SHOWS = import.meta.env.VITE_TMDB_API_KEY_SHOWS;
 
@@ -92,7 +92,7 @@ const MainSection = () => {
 
 
     const data = await response.json();
-
+    console.log(data.results);
     if (!data.results || data.results.length === 0) {
       setErrorMessage("No movies found. Please try another search.");
       setMovieList([]);
@@ -114,6 +114,7 @@ useEffect(() => {
     fetchTvShows(debouncedSearchTerm);
   }
 }, [debouncedSearchTerm, active]);
+
 
   return (
     <>
@@ -190,7 +191,9 @@ useEffect(() => {
             </ul>
             </div>
         )}
+        
       </section>
+      
     </>
   );
 };
