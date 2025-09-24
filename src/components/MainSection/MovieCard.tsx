@@ -15,7 +15,9 @@ interface MovieCardProps {
 
 const MovieCard = ({ title, rating, imageUrl, releaseDate, language, id, type}: MovieCardProps) => {
 
-    const navigate = useNavigate();
+     const navigate = useNavigate();
+  
+  
 
     return (
     <div className="movie-card">

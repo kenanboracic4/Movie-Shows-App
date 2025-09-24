@@ -18,7 +18,7 @@ function Layout() {
       <Routes>
         <Route path="/" element={<Hero />} />
         
-        <Route path="/main/*" element={<MainSection />} />
+        <Route path="/main/:category" element={<MainSection />} />
         
          <Route path="/details/:type/:id" element={<DetailPage />} />
         
