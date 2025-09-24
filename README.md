@@ -1,69 +1,33 @@
-# React + TypeScript + Vite
+Aplikacija za pretragu filmova i serija koja omogućava brzo pretraživanje, pregled najpopularnijih naslova i detaljan prikaz informacija o svakom filmu ili seriji. Napravljena je sa fokusom na performans, responzivni dizajn i jednostavno korisničko iskustvo. Idealna je za demonstraciju API integracije, routing-a i tipiziranog React koda u TypeScriptu.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Funkcionalnosti
+- Pretraga filmova i serija po naslovu.
+- Prikaz najpopularnijih naslova na početnoj stranici.
+- Detaljni prikaz pojedinačnog filma/serije uključujući sinopsis, ocjene, žanrove i slične naslove.
+- Pagination i error handling za stabilno iskustvo pri listanju rezultata.
+- Responsive UI prilagođen mobilnim uređajima i desktopu.
 
-Currently, two official plugins are available:
+Tehnologije
+- Front-end: React
+- Build tooling: Vite
+- Jezik: TypeScript
+- State management: lokalni React state / Zustand  
+- API: TMDB
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Instalacija i pokretanje
+- Kloniraj repo ili preuzmi izvorni kod.
+- U root folderu projekta pokreni instalaciju dependencija:
+      npm i
 
-## Expanding the ESLint configuration
+- Pokreni razvojni server:
+npm run dev
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Otvori preglednik na adresi koju Vite izbaci u konzoli.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Struktura projekta
+- src/ — glavni izvorni kod aplikacije
+- src/pages/ — stranice:  Details
+- src/components/ — ponovo upotrebljive UI komponente (SearchBar, Card, MainSection,  Hero, NavBar)
+- vite.config.ts — konfiguracija Vite-a
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
