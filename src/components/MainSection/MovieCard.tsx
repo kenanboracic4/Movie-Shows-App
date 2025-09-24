@@ -1,4 +1,6 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
+
 
 interface MovieCardProps {
     title: string;
@@ -6,11 +8,16 @@ interface MovieCardProps {
     rating: number;
     releaseDate: string;
     language: string;
+    id: number;
+    type: 'movie' | 'tv';
     
 }
 
-const MovieCard = ({ title, rating, imageUrl, releaseDate, language }: MovieCardProps) => {
-  return (
+const MovieCard = ({ title, rating, imageUrl, releaseDate, language, id, type}: MovieCardProps) => {
+
+    const navigate = useNavigate();
+
+    return (
     <div className="movie-card">
         <img src={imageUrl ?  `https://image.tmdb.org/t/p/w500${imageUrl}` : '/No-Poster.png'} alt="" />
 
@@ -25,10 +32,12 @@ const MovieCard = ({ title, rating, imageUrl, releaseDate, language }: MovieCard
                 <span>|</span>
                 <p>{releaseDate.split("-")[0]}</p>
             </div>
-            <div className="check-more">
+            
+            </div>
+            <div className="check-more" onClick={() => navigate(`/details/${type}/${id}`,
+            )}>
             <p>Check More</p>
             <img id='arrow' src="/arrow.svg" alt="" />
-            </div>
             </div>
       </div>
   )

@@ -3,6 +3,10 @@ import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
 import MainSection from './components/MainSection/MainSection'
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import DetailPage from './pages/DetailPage';
+
+
+
 
 function Layout() {
   const location = useLocation();
@@ -13,7 +17,11 @@ function Layout() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Hero />} />
+        
         <Route path="/main/*" element={<MainSection />} />
+        
+         <Route path="/details/:type/:id" element={<DetailPage />} />
+        
       </Routes>
     </div>
   );

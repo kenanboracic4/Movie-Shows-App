@@ -1,0 +1,228 @@
+.movie-detail-card {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: rgba(22, 3, 79, 0.296);
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 1px 0px 41px -2px rgba(73, 30, 196, 0.73);
+  -webkit-box-shadow: 1px 0px 41px -2px rgba(73, 30, 196, 0.73);
+  -moz-box-shadow: 1px 0px 41px -2px rgba(73, 30, 196, 0.73);
+}
+#backdrop-img {
+  width: 100%;
+  border-radius: 10px;
+  max-height: 400px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+#hero-img {
+  width: 95%;
+  border-radius: 10px;
+  max-height: auto;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.rate-container {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background-color: rgba(6, 6, 97, 0.94);
+  padding: 0.5rem 1rem;
+  border-radius: 9px;
+}
+.movie-info {
+  width: 100%;
+    
+  color: #ffffff;
+  padding: 24px;
+  
+  max-width: 800px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
+.info-row {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: flex-start;
+  gap: 20px;
+  text-align: left;
+  
+}
+
+
+
+.label {
+  color: #6387c6;
+  font-size: 15px;
+  font-weight: 400;
+  min-width: 120px;
+  flex-shrink: 1;
+  line-height: 1.4;
+}
+
+.value {
+  color: #ffffffa9;
+  font-size: 14px;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.genres {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.genre {
+  background-color: #374151;
+  color: #d1d5db;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+
+.countries,
+.languages,
+.production-companies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  color: #ffffffa9;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.separator {
+  color: #7588ae;
+  font-weight: bold;
+  
+}
+.button {
+  width: 80%;
+  margin: 1.5rem auto;
+}
+.goBack {
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, #d6c7ffb6 0%, #AB8BFF 100%);
+margin-top: 2.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+}
+.goBack:hover {
+  background: linear-gradient(90deg, #AB8BFF 0%, #d6c7ffb6 100%);
+}
+@media(min-width: 1024px){
+    .movie-detail-card{
+        width: 90%;
+        margin-top: 5rem;
+        padding: 40px;
+        flex-direction: column;
+        align-items: start;
+        
+    }
+    .title-container{
+    flex-direction: row;
+        justify-content: space-between;
+    width: 95%;
+    margin: 1rem auto;
+    }
+    .title-container h3 {
+        font-size: 2rem;
+    
+    }
+
+    .images-container {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    height: 50vh;
+    align-items: stretch;
+}
+
+.left-image {
+    width: 25%;
+    height: 100%;
+}
+
+.right-image {
+    width: 75%;
+    height: 100%;
+
+}
+
+#backdrop-img {
+    width: 100%;
+    min-height: 100%;
+    object-fit: fill; /* Ovo će pokazati cijelu sliku, centriranu */
+    border-radius: 10px;
+    display: block;
+    flex: 1;
+}
+
+#hero-img {
+    width: 100%;
+    height: 100%; /* Dodao sam height: 100% */
+    object-fit: fill; /* I ovdje isto */
+    border-radius: 10px;
+    display: block;
+    flex: 1;
+}
+    .movie-info{
+        min-width: 100%;
+        padding: 30px;
+        margin-top: 1rem;
+    }
+    .goBack{
+        width: 100%;
+        margin: 2.5rem auto 0 auto;
+    }
+}
+@media (max-width: 1020px) {
+  .movie-detail-card {
+    padding: 10px;
+  }
+  .images-container {
+    width: 100%;
+  }
+  .title-container h3 {
+    font-size: 1.5rem;
+  }
+  .info-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .label {
+    min-width: auto;
+    margin-bottom: 5px;
+  }
+}

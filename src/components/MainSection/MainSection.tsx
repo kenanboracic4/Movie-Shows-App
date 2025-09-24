@@ -50,7 +50,7 @@ const MainSection = () => {
   const fetchTvShows = async (query: string = "") => {
   setIsLoading(true);
   setErrorMessage("");
-
+  
   try {
     const endpoint = query
       ? `${API_BASE_URL}/search/tv?query=${encodeURIComponent(query)}`
@@ -60,7 +60,7 @@ const MainSection = () => {
     if (!response.ok) throw new Error("Failed to fetch TV shows");
 
     const data = await response.json();
-
+    console.log(data.results);
     if (!data.results || data.results.length === 0) {
       setErrorMessage("No TV shows found. Please try another search.")
       setTvShowList([]);
@@ -161,7 +161,9 @@ useEffect(() => {
                   
                   (
                     <MovieCard
+                    type={'movie'}
                       key={movie.id}
+                      id = {movie.id}
                       title={movie.title}
                       rating={movie.vote_average}
                       imageUrl={movie.poster_path}
@@ -179,6 +181,8 @@ useEffect(() => {
               {tvShowList.map(
                 (show) => (
                   <MovieCard
+                    type={'tv'}
+                    id={show.id}
                     key={show.id}
                     title={show.name}
                     rating={show.vote_average}
